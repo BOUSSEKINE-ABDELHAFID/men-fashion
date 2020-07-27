@@ -12,10 +12,18 @@
     align-items: center;
     background-color: #fff;
     position: fixed;
+    box-shadow: -1px 0px 3px -1px rgb(100,100,100);
+
 }
 
 .spaceNavBar{
     flex: 1;
+}
+.logoLink{
+    text-decoration: none;
+    margin-left: 5%;
+    display: inline;
+    width: 200px;
 }
 .logo{
     margin-left: 10%;
@@ -26,8 +34,9 @@
 
 }
 
+
 .storeIcon{
-    margin-right: 5%;
+    margin-right: 10%;
     cursor: pointer;
     transition: 0.2s;
     color:rgba(0, 0, 0, 0.7);
@@ -55,6 +64,11 @@
 .navButtonIcons{
     display: flex;
     width:100% !important;
+}
+
+.linkTopNav{
+    padding-right:1rem;
+    padding-left: 1rem;
 }
 
 @media (max-width : 500px){
