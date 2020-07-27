@@ -1,0 +1,69 @@
+@import "../../App.css";
+
+.navBar{
+    overflow-x: hidden;
+}
+
+.navTop{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    position: fixed;
+}
+
+.spaceNavBar{
+    flex: 1;
+}
+.logo{
+    margin-left: 10%;
+    font-size: 1.7rem;
+    font-style: oblique;
+    cursor: pointer;
+    color:rgba(0, 0, 0, 0.7)
+
+}
+
+.storeIcon{
+    margin-right: 5%;
+    cursor: pointer;
+    transition: 0.2s;
+    color:rgba(0, 0, 0, 0.7);
+    background-color: rgb(240, 240, 240);
+    border-radius: 50%;
+    padding: 0.5rem;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.storeIcon:hover{
+    color : blue;
+}
+
+.navbutton{
+    margin-bottom: 0;
+    position: fixed;
+    margin-top: 93.3vh;
+    height: 10vh;
+    width: 100%;
+    opacity: 0;
+    box-shadow: -1px 0px 3px -1px rgb(100,100,100);
+}
+
+.navButtonIcons{
+    display: flex;
+    width:100% !important;
+}
+
+@media (max-width : 500px){
+    .storeIcon{
+        opacity: 0;
+    }
+
+    .navbutton{
+        opacity: 1;
+    }
+}
+
