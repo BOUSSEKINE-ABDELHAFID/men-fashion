@@ -1,8 +1,9 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
-import image from "./images/jonathan-borba-WbQxNLcyGqA-unsplash.jpg";
+import image from "./img/jonathan-borba-WbQxNLcyGqA-unsplash.jpg";
 import {motion} from "framer-motion"
+import {storeProducts} from "./data.js"
 
 const animateTransition = {
   init : {
@@ -17,6 +18,7 @@ const animateTransition = {
   }
 }
 function App() {
+  console.log(storeProducts)
   return (
     <motion.div className="App"
      variants = {animateTransition}
