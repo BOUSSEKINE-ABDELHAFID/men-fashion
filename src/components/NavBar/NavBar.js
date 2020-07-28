@@ -4,8 +4,10 @@ import ButtonNavigation from "./ButtonNavigation";
 import CardTravel from "@material-ui/icons/CardTravel";
 import InfoIcon from "@material-ui/icons/Info";
 import Tooltip from "@material-ui/core/Tooltip";
-import { withStyles, makeStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
 const LightTooltip = withStyles((theme) => ({
   tooltip: {
     backgroundColor: theme.palette.common.white,
@@ -25,13 +27,13 @@ const NavBar = ({ homeIcon, store, aboutIcon }) => {
         <div className={style.spaceNavBar} />
         <LightTooltip title="store">
           <Link to="/store/" className={style.linkTopNav}>
-            <CardTravel className={style.storeIcon} fontSize="large" />
+            <CardTravel className={style.storeIcon} fontSize="large" color = {store ? "primary" : ""} />
           </Link>
         </LightTooltip>
 
         <LightTooltip title="about">
           <Link to="/about/" className={style.linkTopNav}>
-            <InfoIcon className={style.storeIcon} fontSize="large" />
+            <InfoIcon className={style.storeIcon} fontSize="large" color = {aboutIcon ? "primary" : ""} />
           </Link>
         </LightTooltip>
       </div>

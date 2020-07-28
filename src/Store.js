@@ -1,16 +1,27 @@
-import React, {useState} from 'react'
-import NavBar from './components/NavBar/NavBar';
+import React from "react";
+import NavBar from "./components/NavBar/NavBar";
+import { motion } from "framer-motion";
 
+const animateTransition = {
+  init: {
+    y: 200,
+    opacity: 0,
+  },
+
+  anim: {
+    y: 0,
+    opacity: 1,
+  },
+};
 const Store = () => {
-    const store = true;
+  return (
+    <motion.div variants={animateTransition} initial="init" animate="anim">
+      <NavBar store />
+      <br /> <br /> <br />
+     
+      <h1>This is the store</h1>
+    </motion.div>
+  );
+};
 
-    return (
-        <div>
-        <NavBar store/>
-      <br/> <br/><br/>
-            <h1>This is the store</h1>
-        </div>
-    )
-}
-
-export default Store
+export default Store;
