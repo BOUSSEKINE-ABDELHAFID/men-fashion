@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Router from './Router';
+import {ProductProvider} from './context'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <ProductProvider>
     <Router />
-  </React.StrictMode>,
+  </ProductProvider>,
   document.getElementById('root')
 );
 

@@ -1,0 +1,87 @@
+.card{
+    height:45vh;
+    width: 20vw;
+    text-align: center;
+    margin: 3rem 1.2rem;
+}
+
+.card img{
+    height:45vh;
+    width:20vw;
+    transition: 0.4s;
+
+}
+
+.card h1{
+    position: relative;
+    top: -80px;
+    opacity: 0;
+}
+
+.card:hover img{
+    opacity: 0.3;
+    transform: scale(1.05);
+}
+
+.card:hover h1{
+    animation: animateH1 0.4s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animateH1{
+    0%{
+        top: -80px;
+
+        opacity: 1;
+    }
+
+    50%{
+        top: -140px;
+        opacity: 1;
+
+    }
+
+    75%{
+        top: -110px;
+        opacity: 1;
+
+    }
+
+    100%{
+        top: -120px;
+        opacity: 1;
+
+    }
+}
+
+
+@media (max-width : 800px){
+    .card{
+        height:45vh;
+        width: 40vw;
+        text-align: center;
+        margin: 3rem 1.2rem;
+    }
+    
+    .card img{
+        height:45vh;
+        width:40vw;
+        transition: 0.4s;
+    
+    }
+}
+
+@media (max-width : 500px){
+    .card{
+        height:45vh;
+        width: 40vw;
+    }
+    
+    .card img{
+        height:45vh;
+        width:70vw;
+        margin: 2rem 1.5rem;
+
+    
+    }
+}

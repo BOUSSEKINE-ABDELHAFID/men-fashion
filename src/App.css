@@ -59,4 +59,28 @@
   }
 }
 
+.productsContainer section {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
 
+.productsContainer section:nth-child(1){
+  background-color: white;
+}
+
+
+.productsContainer section:nth-child(2){
+  background-color: #feeee6;
+}
+
+.productsContainer section:nth-child(3){
+  background-color: white;
+}
+
+.productsContainer section:nth-child(4){
+  background-color: #faefd4;
+}
+
+.productsContainer section:nth-child(5){
+  background-color: white;
+}
