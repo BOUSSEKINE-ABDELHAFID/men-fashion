@@ -28,6 +28,31 @@
     animation-fill-mode: forwards;
 }
 
+.card button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    position: relative;
+    top: -350px;
+    left: 120px;
+    opacity: 0;
+    transition: 0.2s;
+    cursor: pointer;
+    margin-right: 2rem;
+    
+}
+
+.card:hover button{
+    opacity: 1;
+}
+.card button span{
+    text-transform: uppercase;
+    color: black;
+    font-weight: 600;
+    margin-right: 5rem;
+}
+
 @keyframes animateH1{
     0%{
         top: -80px;
@@ -84,4 +109,11 @@
 
     
     }
+
+    .card button{
+        top: -360px;
+        left: 180px;
+    }
 }
+
+

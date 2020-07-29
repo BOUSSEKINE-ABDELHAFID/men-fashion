@@ -5,7 +5,7 @@ const ProductsList = ({products}) => {
     return (
         <div className = {style.productList}>
            {
-               products.map(product =><ProductCart image = {product.image} price = {product.price}/>)
+               products.map(product =><ProductCart product = {product} />)
            }  
         </div>
     )

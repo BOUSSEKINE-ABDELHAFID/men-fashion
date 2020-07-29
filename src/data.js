@@ -4,7 +4,7 @@ export const storeProducts = {
             id : 1,
             image : './images/hats/ahmed-syed-6NVrH0HB_DE-unsplash.jpg',
             price : 8,
-            inCart : false,
+            inCart : true,
             count : 0,
             total : 0
         },

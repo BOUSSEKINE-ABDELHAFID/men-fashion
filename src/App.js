@@ -1,9 +1,8 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
-import image from "./img/jonathan-borba-WbQxNLcyGqA-unsplash.jpg";
+import image from "./img/nordwood-themes-Nv4QHkTVEaI-unsplash.jpg";
 import { motion } from "framer-motion";
-import { storeProducts } from "./data.js";
 import { ProductConsumer } from "./context";
 import ProductList from "./components/PodectsList/ProductsList";
 
@@ -31,31 +30,29 @@ function App() {
       <h1 className="AppH1Introductor">
         Explore the products that make look better
       </h1>
-     
+
       <ProductConsumer>
         {(value) => {
-          console.log(value);
           return (
-            <div className = "productsContainer">
+            <div className="productsContainer">
               <section>
-               
                 <ProductList products={value.data.shoes} />
               </section>
 
               <section>
-                 <ProductList products={value.data.sunglasses} />
+                <ProductList products={value.data.sunglasses} />
               </section>
 
               <section>
-                 <ProductList products={value.data.watches} />
+                <ProductList products={value.data.watches} />
               </section>
 
               <section>
-                 <ProductList products={value.data.hats} />
+                <ProductList products={value.data.hats} />
               </section>
 
               <section>
-                 <ProductList products={value.data.tshirts} />
+                <ProductList products={value.data.tshirts} />
               </section>
             </div>
           );
