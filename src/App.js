@@ -35,31 +35,17 @@ function App() {
         {(value) => {
           return (
             <div className="productsContainer">
-              <section>
-                <ProductList products={value.data.shoes} />
-              </section>
-
-              <section>
-                <ProductList products={value.data.sunglasses} />
-              </section>
-
-              <section>
-                <ProductList products={value.data.watches} />
-              </section>
-
-              <section>
-                <ProductList products={value.data.hats} />
-              </section>
-
-              <section>
-                <ProductList products={value.data.tshirts} />
-              </section>
+              {value.data.map((item) => {
+                return (
+                  <section>
+                    <ProductList products={item} />
+                  </section>
+                );
+              })}
             </div>
           );
         }}
       </ProductConsumer>
-
-      <br />
     </motion.div>
   );
 }

@@ -1,19 +1,40 @@
-import React from 'react'
-import style from "./ProductCard.module.css"
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import React from "react";
+import style from "./ProductCard.module.css";
+import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
+import PropTypes from "prop-types";
+import { ProductConsumer } from "../../context";
 
-const ProductCart = (props) => {
-    const {id, image, price, inCart, count} = props.product
-    return (
-        <div className = {style.card} onClick = {()=> console.log("the product is selectioned")}>
-            <img src={image} alt=""/>
+const ProductCard = (props) => {
+  const { id, image, price, inCart, count } = props.product;
+  return (
+    <ProductConsumer>
+      {(value) => {
+        return (
+          <div className={style.card}>
+            <img src={image} alt="" />
             <h1>{price}$</h1>
-            <button disabled = {inCart ? true: false} className = "inCartbtn">
-                {inCart ? (<span>In Cart</span>) : (<AddShoppingCartIcon/>) }
+            <button
+              disabled={inCart ? true : false}
+              className="inCartbtn"
+              onClick={() => value.addToChart(id)}
+            >
+              {inCart ? <span>In Cart</span> : <AddShoppingCartIcon />}
             </button>
+          </div>
+        );
+      }}
+    </ProductConsumer>
+  );
+};
 
-        </div>
-    )
-}
+ProductCard.propTypes = {
+  productCard: PropTypes.shape({
+    id: PropTypes.number,
+    image: PropTypes.string,
+    price: PropTypes.number,
+    inCart: PropTypes.bool,
+    count: PropTypes.number,
+  }).isRequired,
+};
 
-export default ProductCart
+export default ProductCard;
