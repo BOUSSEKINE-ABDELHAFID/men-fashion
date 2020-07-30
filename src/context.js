@@ -7,6 +7,8 @@ class ProductProvider extends Component {
   state = {
     products: [],
     cart: [],
+    showModal : false,
+    modalProduct : {}
   };
 
   componentDidMount() {
@@ -68,7 +70,7 @@ class ProductProvider extends Component {
   };
 
   addToChart = (id) => {
-    let product = this.getItem(id);
+    var product = this.getItem(id);
     product.inCart = true;
     product.count = 1;
     product.total = product.price;
@@ -81,20 +83,34 @@ class ProductProvider extends Component {
         }
       });
     });
-    this.setState(prev => {
+    this.setState(()=> {
       return {
-        products: prev.products,
-        cart: [...prev.cart, product],
-      };
-    });
-    console.log(this.state);
+        products : this.state.products,
+        cart : [...this.state.cart, product]
+      }
+    },()=> console.log(this.state)
+    )
   };
+
+
+  openModal = id => {
+    const product = this.getItem(id);
+    this.setState({showModal : true, modalProduct : product});
+  }
+
+  closeModal = ()=> {
+    this.setState({
+      showModal : false,
+    })
+  }
   render() {
     return (
       <ProductContext.Provider
-        value={{
+        value={{...this.state,
           data: this.state.products,
           addToChart: this.addToChart,
+          openModal : this.openModal,
+          closeModal : this.closeModal
         }}
       >
         {this.props.children}

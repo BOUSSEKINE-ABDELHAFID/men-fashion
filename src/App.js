@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { ProductConsumer } from "./context";
 import ProductList from "./components/PodectsList/ProductsList";
 
+
 const animateTransition = {
   init: {
     y: 200,
@@ -21,9 +22,10 @@ function App() {
   return (
     <motion.div
       className="App"
-      variants={animateTransition}
-      initial="init"
-      animate="anim"
+      variants = {animateTransition}
+      initial = "init"
+      animate = "anim"
+      
     >
       <NavBar homeIcon />
       <img src={image} alt="" className="headerImage" />

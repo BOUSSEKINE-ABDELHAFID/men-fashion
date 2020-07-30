@@ -16,7 +16,10 @@ const ProductCard = (props) => {
             <button
               disabled={inCart ? true : false}
               className="inCartbtn"
-              onClick={() => value.addToChart(id)}
+              onClick={() => {
+                value.addToChart(id);
+                value.openModal(id);
+                }}
             >
               {inCart ? <span>In Cart</span> : <AddShoppingCartIcon />}
             </button>
