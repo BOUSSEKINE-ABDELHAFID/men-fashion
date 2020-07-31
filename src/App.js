@@ -30,7 +30,7 @@ function App() {
       <NavBar homeIcon />
       <img src={image} alt="" className="headerImage" />
       <h1 className="AppH1Introductor">
-        Explore the products that make look better
+        Explore the products that make you look better
       </h1>
 
       <ProductConsumer>
