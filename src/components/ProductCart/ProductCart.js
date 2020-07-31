@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { ProductConsumer } from "../../context";
 
 const ProductCard = (props) => {
-  const { id, image, price, inCart, count } = props.product;
+  const { id, image, price, inCart } = props.product;
   return (
     <ProductConsumer>
       {(value) => {

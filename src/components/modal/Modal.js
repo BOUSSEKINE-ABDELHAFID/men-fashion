@@ -20,7 +20,7 @@ const Modal = () => {
     <ProductConsumer>
       {(value) => {
         const { modalProduct, showModal, closeModal } = value;
-        const { id, image, price } = modalProduct;
+        const { image, price } = modalProduct;
         return (
           showModal && (
             <div className={style.modalContainer}>

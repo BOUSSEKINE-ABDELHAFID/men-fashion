@@ -9,7 +9,6 @@ class ProductProvider extends Component {
     cart: [],
     showModal : false,
     modalProduct : {},
-    finalTotal : 0,
   };
 
   componentDidMount() {
@@ -123,24 +122,20 @@ class ProductProvider extends Component {
   }
 
   handleCount = (id, num) => {
-      this.state.cart.forEach(product => {
+      const tempCart = [...this.state.cart];
+      tempCart.forEach(product => {
         if(product.id === id){
           product.count = num;
           product.total = num * product.price;
         }
       })
+      this.setState({
+        cart : tempCart
+      })
   }
 
 
-  calculateTotal = () => {
-    var t = 0;
-    this.state.cart.reduce((t, item)=>{
-      return t+ item.total;
-    }, 0)
-    this.setState({
-      finalTotal : t,
-    })    
-  }
+  
 
 
   render() {

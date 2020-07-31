@@ -13,6 +13,7 @@
     background-color: #fff;
     position: fixed !important;
     box-shadow: -1px 0px 3px -1px rgb(100,100,100);
+    z-index: 999;
 
 }
 
@@ -55,10 +56,12 @@
     margin-bottom: 0;
     position: fixed !important;
     margin-top: 93.3vh;
+    margin-bottom: 0 !important;
     height: 10vh;
     width: 100%;
     opacity: 0;
     box-shadow: -1px 0px 3px -1px rgb(100,100,100);
+    z-index: 999;
 }
 
 .navButtonIcons{

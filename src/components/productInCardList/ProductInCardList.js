@@ -4,7 +4,7 @@ import Pagination from '@material-ui/lab/Pagination';
 import DeleteIcon from '@material-ui/icons/Delete';
 
 const ProductInCardList = (props) => {
-    const {id, image, price, inCart, count, total} = props.product;
+    const {id, image, total} = props.product;
     const [numberP, setnumberP] = useState(1);
     const handleChange = (event, numberP) => {
         setnumberP(numberP);

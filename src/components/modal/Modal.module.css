@@ -85,8 +85,8 @@
 
 @media (max-width : 500px){
     .modalContent{
-        width: 80%;
-        height: 50vh;
+        width: 85%;
+        height: 55vh;
        
     }
     .modalContent h2{
