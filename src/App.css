@@ -85,3 +85,14 @@
 .productsContainer section:nth-child(5) {
   background-color: white;
 }
+
+
+.productsInCardListContainer{
+  overflow-x: hidden;
+  margin-top: 15vh;
+}
+
+.cartEmpty{
+  text-align: center;
+  margin-top: 10%;
+}

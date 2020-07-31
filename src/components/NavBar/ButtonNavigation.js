@@ -26,13 +26,13 @@ export default function SimpleBottomNavigation({ homeIcon, store, about }) {
           />
         </Link>
 
-        <Link to="/store/" className={style.linkTopNav}>
+        <Link to="/store" className={style.linkTopNav}>
           <BottomNavigationAction
             icon={<CardTravel color={store ? "primary" : ""} />}
           />
         </Link>
 
-        <Link to="/about/" className={style.linkTopNav}>
+        <Link to="/about" className={style.linkTopNav}>
           <BottomNavigationAction
             icon={<InfoIcon color={about ? "primary" : ""} />}
           />

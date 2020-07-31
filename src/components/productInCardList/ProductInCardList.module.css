@@ -1,0 +1,62 @@
+.listCont{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    flex-shrink: 200px;
+    margin-left: 10%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    overflow-x: hidden;
+}
+
+.listCont img{
+    width: 15vw;
+    height: 30vh;
+}
+
+.subTotalContainer{
+    text-align: center;
+
+}
+
+.deleteIcon{
+    cursor: pointer;
+    color: black;
+    transition: 0.4s;
+}
+.deleteIcon:hover{
+    color: red;
+}
+
+
+@media(max-width : 1050px){
+    .listCont img{
+        width: 18vw;
+        height: 30vh;
+    }
+}
+
+@media(max-width : 700px){
+    .listCont{
+        flex-direction: column;
+        margin-bottom: 20vh;
+
+    }
+    .pagination{
+        width: 350px;
+        margin-bottom: 3vh;
+    }
+
+    .deleteIcon{
+        margin-bottom: 3vh;
+    }
+    .listCont img{
+        width: 50vw;
+        height: 30vh;
+        margin-bottom: 3vh;
+    }
+}
+
+

@@ -8,7 +8,8 @@ class ProductProvider extends Component {
     products: [],
     cart: [],
     showModal : false,
-    modalProduct : {}
+    modalProduct : {},
+    finalTotal : 0,
   };
 
   componentDidMount() {
@@ -103,6 +104,45 @@ class ProductProvider extends Component {
       showModal : false,
     })
   }
+
+
+  deleteProductFromCart = id => {
+    const temp = this.state.cart.filter(item => item.id !== id);
+    this.state.products.forEach((type) => {
+      type.forEach((p) => {
+        if (p.id === id) {
+          p.inCart = false;
+          p.count = 0;
+        }
+      });
+    });
+
+    this.setState({
+      cart : temp,
+    })
+  }
+
+  handleCount = (id, num) => {
+      this.state.cart.forEach(product => {
+        if(product.id === id){
+          product.count = num;
+          product.total = num * product.price;
+        }
+      })
+  }
+
+
+  calculateTotal = () => {
+    var t = 0;
+    this.state.cart.reduce((t, item)=>{
+      return t+ item.total;
+    }, 0)
+    this.setState({
+      finalTotal : t,
+    })    
+  }
+
+
   render() {
     return (
       <ProductContext.Provider
@@ -110,7 +150,9 @@ class ProductProvider extends Component {
           data: this.state.products,
           addToChart: this.addToChart,
           openModal : this.openModal,
-          closeModal : this.closeModal
+          closeModal : this.closeModal,
+          deleteProductFromCart : this.deleteProductFromCart,
+          handleCount : this.handleCount
         }}
       >
         {this.props.children}

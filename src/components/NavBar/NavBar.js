@@ -27,7 +27,7 @@ const NavBar = ({ homeIcon, store, aboutIcon }) => {
 
         <div className={style.spaceNavBar} />
         <LightTooltip title="store">
-          <Link to="/store/" className={style.linkTopNav}>
+          <Link to="/store" className={style.linkTopNav}>
             <CardTravel
               className={style.storeIcon}
               fontSize="large"
