@@ -84,3 +84,10 @@
     }
 }
 
+@media (max-width : 380px){
+    .navbutton{
+        
+        margin-top: 93vh;
+    }
+}
+

@@ -116,4 +116,12 @@
     }
 }
 
+@media (max-width : 380px){
+
+    .card button{
+        top: -340px;
+        left: 180px;
+    }
+}
+
 
