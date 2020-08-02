@@ -1,3 +1,4 @@
+//the Chart when we display all the products added to it
 import React from "react";
 import NavBar from "./components/NavBar/NavBar";
 import { motion } from "framer-motion";
@@ -6,7 +7,7 @@ import { ProductConsumer } from "./context";
 
 
 
-const animateTransition = {
+const animateTransition = {//setting a transition between pages with framer motion 
   init: {
     y: 200,
     opacity: 0,

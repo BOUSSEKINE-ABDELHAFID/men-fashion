@@ -1,3 +1,4 @@
+//all the necessary data
 export const storeProducts = [
   [
     {

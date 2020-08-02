@@ -1,3 +1,4 @@
+//the home page where we find the list of products
 import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
@@ -7,7 +8,7 @@ import { ProductConsumer } from "./context";
 import ProductList from "./components/PodectsList/ProductsList";
 
 
-const animateTransition = {
+const animateTransition = {//setting a transition with framer motion
   init: {
     y: 200,
     opacity: 0,

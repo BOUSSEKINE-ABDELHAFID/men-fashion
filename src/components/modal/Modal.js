@@ -15,6 +15,8 @@ const popModal = {
     },
   },
 };
+
+// a model to display after clicking buy on a product with a confirmation message and product's information
 const Modal = () => {
   return (
     <ProductConsumer>

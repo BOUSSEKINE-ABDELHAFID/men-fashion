@@ -6,7 +6,7 @@ import CardTravel from "@material-ui/icons/CardTravel";
 import InfoIcon from "@material-ui/icons/Info";
 import style from "./NavBar.module.css";
 import { Link } from "react-router-dom";
-
+//nav buttom to display with small devices (phones ...)
 export default function SimpleBottomNavigation({ homeIcon, store, about }) {
   const [value, setValue] = React.useState(0);
 

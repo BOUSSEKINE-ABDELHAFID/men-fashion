@@ -1,3 +1,4 @@
+//context api
 import React, { Component } from "react";
 import { storeProducts } from "./data";
 const ProductContext = React.createContext();
@@ -5,13 +6,13 @@ const ProductConsumer = ProductContext.Consumer;
 
 class ProductProvider extends Component {
   state = {
-    products: [],
-    cart: [],
-    showModal : false,
-    modalProduct : {},
+    products: [],//all the list of products
+    cart: [],//the products added to the cart
+    showModal : false,//a boolean that shows the model when clicking to by a product
+    modalProduct : {},//the product that we show in the model
   };
 
-  componentDidMount() {
+  componentDidMount() {//where we initally fill the products with the data in the file data.js
     this.setProducts();
   }
 
@@ -59,7 +60,7 @@ class ProductProvider extends Component {
   };
   
   */
-  getItem = (id) => {
+  getItem = (id) => {//getting an item with its id
     var searchedProduct = {};
     this.state.products.forEach((type) => {
       const searchedItem = type.find((product) => product.id === id);
@@ -69,7 +70,7 @@ class ProductProvider extends Component {
     return searchedProduct;
   };
 
-  addToChart = (id) => {
+  addToChart = (id) => {//adding a specefic product with a unique id to the chart
     var product = this.getItem(id);
     product.inCart = true;
     product.count = 1;
@@ -93,7 +94,7 @@ class ProductProvider extends Component {
   };
 
 
-  openModal = id => {
+  openModal = id => {//opening the modal
     const product = this.getItem(id);
     this.setState({showModal : true, modalProduct : product});
   }
@@ -105,9 +106,10 @@ class ProductProvider extends Component {
   }
 
 
-  deleteProductFromCart = id => {
-    const temp = this.state.cart.filter(item => item.id !== id);
-    this.state.products.forEach((type) => {
+  deleteProductFromCart = id => {//deleting a product from the chart
+    const temp = this.state.cart.filter(item => item.id !== id);//we extract all the product except of teh specific producrt to delete
+
+    this.state.products.forEach((type) => {//we search for it in the general list of products and we make some modifications
       type.forEach((p) => {
         if (p.id === id) {
           p.inCart = false;
@@ -121,7 +123,7 @@ class ProductProvider extends Component {
     })
   }
 
-  handleCount = (id, num) => {
+  handleCount = (id, num) => {//how many we buy of this product
       const tempCart = [...this.state.cart];
       tempCart.forEach(product => {
         if(product.id === id){
@@ -142,7 +144,6 @@ class ProductProvider extends Component {
     return (
       <ProductContext.Provider
         value={{...this.state,
-          data: this.state.products,
           addToChart: this.addToChart,
           openModal : this.openModal,
           closeModal : this.closeModal,

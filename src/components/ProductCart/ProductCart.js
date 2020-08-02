@@ -3,6 +3,7 @@ import style from "./ProductCard.module.css";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import { ProductConsumer } from "../../context";
 
+//this card contains the image, and the price of the product with an add to chat buttom
 const ProductCard = (props) => {
   const { id, image, price, inCart } = props.product;
   return (

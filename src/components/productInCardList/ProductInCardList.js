@@ -3,6 +3,8 @@ import style from "./ProductInCardList.module.css"
 import Pagination from '@material-ui/lab/Pagination';
 import DeleteIcon from '@material-ui/icons/Delete';
 
+
+//displaying a product info in the chart
 const ProductInCardList = (props) => {
     const {id, image, total} = props.product;
     const [numberP, setnumberP] = useState(1);
