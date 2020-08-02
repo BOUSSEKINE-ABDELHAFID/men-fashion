@@ -10,31 +10,33 @@ import { Link } from "react-router-dom";
 export default function SimpleBottomNavigation({ homeIcon, store, about }) {
   const [value, setValue] = React.useState(0);
 
+  const handleValue = (event, newValue) => {
+    setValue(newValue);
+
+  }
+
   return (
     <div className={style.navbutton}>
       <BottomNavigation
         value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-        showLabels
+        onChange={handleValue}
         className={style.navButtonIcons}
       >
         <Link to="/" className={style.linkTopNav}>
           <BottomNavigationAction
-            icon={<HomeIcon color={homeIcon ? "primary" : ""} />}
+            icon={<HomeIcon color={homeIcon ? "primary" : "inherit"} />}
           />
         </Link>
 
         <Link to="/store" className={style.linkTopNav}>
           <BottomNavigationAction
-            icon={<CardTravel color={store ? "primary" : ""} />}
+            icon={<CardTravel color={store ? "primary" : "inherit"} />}
           />
         </Link>
 
         <Link to="/about" className={style.linkTopNav}>
           <BottomNavigationAction
-            icon={<InfoIcon color={about ? "primary" : ""} />}
+            icon={<InfoIcon color={about ? "primary" : "inherit"} />}
           />
         </Link>
       </BottomNavigation>

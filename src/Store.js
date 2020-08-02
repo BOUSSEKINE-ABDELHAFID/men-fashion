@@ -3,8 +3,7 @@ import NavBar from "./components/NavBar/NavBar";
 import { motion } from "framer-motion";
 import ProductInCardList from "./components/productInCardList/ProductInCardList";
 import { ProductConsumer } from "./context";
-import {Elements} from '@stripe/react-stripe-js';
-import {loadStripe} from '@stripe/stripe-js';
+
 
 
 const animateTransition = {
@@ -34,6 +33,7 @@ const Store = () => {
                     product={product}
                     handleCount={value.handleCount}
                     deleteProductFromCart={value.deleteProductFromCart}
+                    key = {product.id}
                   />
                 ))}
                 <div className = "totalPrice">

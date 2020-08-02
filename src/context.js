@@ -88,7 +88,7 @@ class ProductProvider extends Component {
         products : this.state.products,
         cart : [...this.state.cart, product]
       }
-    },()=> console.log(this.state)
+    }
     )
   };
 

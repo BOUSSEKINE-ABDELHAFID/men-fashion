@@ -1,7 +1,6 @@
 import React from "react";
 import style from "./ProductCard.module.css";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
-import PropTypes from "prop-types";
 import { ProductConsumer } from "../../context";
 
 const ProductCard = (props) => {
@@ -30,14 +29,5 @@ const ProductCard = (props) => {
   );
 };
 
-ProductCard.propTypes = {
-  productCard: PropTypes.shape({
-    id: PropTypes.number,
-    image: PropTypes.string,
-    price: PropTypes.number,
-    inCart: PropTypes.bool,
-    count: PropTypes.number,
-  }).isRequired,
-};
 
 export default ProductCard;

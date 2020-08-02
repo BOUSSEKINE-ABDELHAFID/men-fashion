@@ -24,8 +24,9 @@ const About = () => {
     >
       <NavBar aboutIcon />
       <div className = "aboutContent">
+      <h2>About</h2>
+
         <p>
-        <h2>About</h2>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis in
           laboriosam voluptatem autem provident eos incidunt modi libero nulla
           perferendis quisquam nemo enim, magnam maxime velit rem quidem quasi

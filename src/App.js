@@ -37,9 +37,9 @@ function App() {
         {(value) => {
           return (
             <div className="productsContainer">
-              {value.data.map((item) => {
+              {value.data.map((item, index) => {
                 return (
-                  <section>
+                  <section key = {index}>
                     <ProductList products={item} />
                   </section>
                 );
